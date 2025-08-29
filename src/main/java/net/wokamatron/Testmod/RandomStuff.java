@@ -14,21 +14,23 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.wokamatron.Testmod.block.ModBlocks;
+import net.wokamatron.Testmod.item.ModCreativeModeTabs;
 import net.wokamatron.Testmod.item.ModItems;
 import org.slf4j.Logger;
 
 // comment
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(Testmod.Mod_Id)
-public class Testmod
+@Mod(RandomStuff.Mod_Id)
+public class RandomStuff
 {
     // Define mod id in a common place for everything to reference
-    public static final String Mod_Id = "testmod";
+    public static final String Mod_Id = "randomstuff";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
-    public Testmod()
+    public RandomStuff()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -38,7 +40,10 @@ public class Testmod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -56,6 +61,11 @@ public class Testmod
       if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
           event.accept(ModItems.ALEXANDRITE);
           event.accept(ModItems.RAW_ALEXANDRITE);
+      }
+
+      if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+          event.accept(ModBlocks.ALEXANDRITE_BLOCK);
+          event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
       }
     }
 

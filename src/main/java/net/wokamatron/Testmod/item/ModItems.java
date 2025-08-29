@@ -5,11 +5,11 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.wokamatron.Testmod.Testmod;
+import net.wokamatron.Testmod.RandomStuff;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS=
-            DeferredRegister.create(ForgeRegistries.ITEMS, Testmod.Mod_Id);
+            DeferredRegister.create(ForgeRegistries.ITEMS, RandomStuff.Mod_Id);
 
     public static final RegistryObject<Item> ALEXANDRITE = ITEMS.register("alexandrite",
             () -> new Item(new Item.Properties()));

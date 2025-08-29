@@ -1,0 +1,10 @@
+{
+  "item.randomstuff.alexandrite": "Alexandrite Gem",
+  "item.randomstuff.raw_alexandrite": "Raw Alexandrite",
+
+  "block.randomstuff.alexandrite_block": "Block of Alexandrite",
+  "block.randomstuff.raw_alexandrite_block": "Block of Raw Alexandrite",
+
+  "creativetab.randomstuff.alexandrite_items": "Alexandrite Items",
+  "creativetab.randomstuff.alexandrite_blocks": "Alexandrite Blocks"
+}
