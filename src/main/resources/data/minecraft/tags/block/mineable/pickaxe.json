@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "randomstuff:alexandrite_block",
+    "randomstuff:raw_alexandrite_block",
+    "randomstuff:alexandrite_ore",
+    "randomstuff:alexandrite_deepslate_ore"
+  ]
+}
